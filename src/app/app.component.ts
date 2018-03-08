@@ -6,5 +6,22 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app';
+
+   persons: Array<{"email": string, "name": string, "age": number}>;
+   inputName : string = '';
+  constructor(){
+    this.persons = [
+      {"email": "test@gmail.com", "name": "Иванов Иван Иваноыич", "age": 24},
+      {"email": "test@gmail.com", "name": "Иванов Иван Иваноыич", "age": 24},
+      {"email": "test@gmail.com", "name": "Иванов Иван Иваноыич", "age": 24},
+      {"email": "test@gmail.com", "name": "Иванов Иван Иваноыич", "age": 24},
+      {"email": "test@gmail.com", "name": "Иванов Иван Иваноыич", "age": 24},
+      {"email": "test@gmail.com", "name": "Иванов Иван Иваноыич", "age": 24},
+      {"email": "test@gmail.com", "name": "Иванов Иван Иваноыич", "age": 24}
+    ]
+  }
+
+
+
+  
 }

@@ -1,20 +1,96 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<div class="container">
 
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" placeholder="Поиск ..." aria-label="Recipient's username" aria-describedby="basic-addon2">
+      
+      <div class="input-group-append">
+        <button class="btn searchButton" type="button">Поиск</button>
+      </div>
+    </div>
+
+
+    <div class="list-group">
+      <a href="#">
+          <div class="d-none d-md-block">
+            
+            <div class="row" id="header">
+              <div class="col-2" text-center></div>
+
+              <div class="col-10">
+                <div class="row">
+                    <div class="col-3 col-md-3" text-center>Плчтовый адресс</div>
+                    <div class="col-7 col-md-7" text-center>ФИО</div>
+                    <div class="col-2 col-md-2" text-center>Возрост</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </a>
+    </div>
+      
+    
+    <div class="list-group">
+      <a href="#" class="list-group-item list-group-item-action" *ngFor="let person of persons">
+
+          <div class="row">
+              <div class="col-2" id="col1">
+                  <div class="form-check radio-green" id="radioInput">
+                      <input class="form-check-input" name="group100" type="radio" id="radio100">
+                  </div>
+              </div>
+
+              <div class="col-10">
+                <div class="d-sm-none d-lg-none d-xl-none">
+                  <ul class="list-unstyled" style="text-align: left">
+                    <li> {{person.email}}</li>
+                    <li> {{person.name}}</li>
+                    <li> {{person.age}}</li>
+                  </ul>
+                </div>
+
+                <div class="d-none d-sm-block">
+                  <div class="row ">
+                      <div class="col-3 col-md-3">
+                          {{person.email}}
+                        </div>
+                        <div class="col-7 col-md-7">
+                          {{person.name}}
+                        </div>
+                        <div class="col-2 col-md-2">
+                            {{person.age}}
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+            
+        </a>
+    </div>
+
+
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+              <span class="sr-only">Previous</span>
+            </a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link active" href="#">3</a></li>
+          <li class="page-item"><a class="page-link" href="#">...</a></li>
+          <li class="page-item"><a class="page-link" href="#">5</a></li>
+          <li class="page-item"><a class="page-link" href="#">6</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+              <span class="sr-only">Next</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    
+    
+</div>

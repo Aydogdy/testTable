@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+@media screen and (min-width: 577px) {
+    body, html {
+        font-family: 'Roboto';
+        font-size: 18px;
+        background-color: #1f1f1f;
+    }
+}
+
+@media screen and (max-width: 778px) {
+    body, html {
+        font-family: 'Roboto';
+        font-size: 14px;
+        background-color: #1f1f1f;
+        min-width: 300px;
+    } 
+}
